@@ -23,7 +23,7 @@
             <!-- Sidebar -->
             <div class="list-group">
                 <a href="" class="list-group-item list-group-item-action">Dashboard</a>
-                <a href="" class="list-group-item list-group-item-action" id="manage-words">Manage Words</a>
+                <div class="list-group-item list-group-item-action" id="manage-words">Manage Words</div>
                 <a href="" class="list-group-item list-group-item-action">User Management</a>
                 <!-- Add more menu items as needed -->
             </div>
@@ -122,7 +122,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
     $(document).ready(function(){
         $("#manage-words").click(function(){
-            $("#manage-words-panel").toggle();
+            $("#manage-words-panel").show();
         });
     });
 </script>
