@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
     $(document).ready(function(){
-      $("button").click(function(){
-     $("p").toggle();
+      $("#manage-words").click(function(){
+      $("#panel").toggle();
     });
    });</script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,7 +36,7 @@
         </div>
         
 
-            <div class="card mb-4">
+            <div class="card mb-4" id="panel">
                 <div class="card-header" id="manage-words-panel">
                     Manage Words
                 </div>
