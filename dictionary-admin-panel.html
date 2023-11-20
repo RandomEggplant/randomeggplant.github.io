@@ -28,6 +28,88 @@
                 <!-- Add more menu items as needed -->
             </div>
         </div>
+        
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    Manage Words
+                </div>
+                <div class="card-body">
+                    <!-- Add your manage words content here -->
+                    <div id="manage-words" class="panel">
+                        <h2>Manage Words</h2>
+                        <form id="add-word form">
+                            <div class="form-group">
+                                <label for="word">Word:</label>
+                                <input type="text" class="form-control" id="word" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Word</button>
+                        </form>
+                        <table class="table mt-4">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Word</th>
+                                </tr>
+                            </thead>
+                            <tbody id="word-list">
+                                <!--nothing-->
+                            </tbody>
+                        </table>
+                    </div>
+                    <script>
+                        document.getElementById('add-word-form').addEventListener('submit', function(event){
+                            event.preventDefault();
+                            const wordInput = document.getElementById('word');
+                            const word = wordInput.value;
+                            if (word.trim() === '') {
+                                alert('Please enter a word.')
+                                return;
+                            }
+                            const wordList = document.getElementById('word-list');
+                            const newRow = document.createElement('tr');
+                            newRow.innerHTML = `
+                               <th scope="row">${wordList.children.length + 1}</th>
+                               <td>${word}</td>
+                            `;
+                            wordList.appendChild(newRow);
+                            wordInput.value = '';
+
+                        })
+                    </script>
+                </div>
+            <!-- Main Content -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    User Management
+                </div>
+                <div class="card-body">
+                    <!-- Add your user management content here -->
+                    <!-- Example: -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>john_doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+                
 
         <div class="col-md-9">
             <!-- Main Content -->
