@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        document.querySelector("#manage-words").click(function(){
-        document.querySelector("#manage-words-panel").toggle();
-        });
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+    $(document).ready(function(){
+      $("button").click(function(){
+     $("p").toggle();
     });
-    </script>
+   });</script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style>body {
     background-image: url("https://www.dictionary.com/images/dictionary_social_logo.png")
@@ -126,7 +125,6 @@
 </div>
 
 <!-- Bootstrap JS and dependencies (popper.js and jQuery) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
